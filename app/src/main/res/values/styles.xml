@@ -42,5 +42,26 @@ limitations under the License. -->
         <item name="android:paddingLeft">8dp</item>
     </style>
 
+    <style name="largeTextBlack" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">38sp</item>
+        <item name="android:fontFamily">@font/iransans</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="middleTextBlack">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/iransans_fanum_medium</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="smallTextBlack">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/iransans_small_light</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
 
 </resources>

@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Get a new or existing ViewModel from the ViewModelProvider.
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
-
-        // Add an observer on the LiveData returned by getAlphabetizedWords.
-        // The onChanged() method fires when the observed data changes and the activity is
-        // in the foreground.
+//
+//        // Add an observer on the LiveData returned by getAlphabetizedWords.
+//        // The onChanged() method fires when the observed data changes and the activity is
+//        // in the foreground.
         mWordViewModel.getAllWords().observe(this, new Observer<List<Word>>() {
             @Override
             public void onChanged(@Nullable final List<Word> words) {

@@ -1,4 +1,4 @@
-package com.example.android.roomwordssample;
+package ir.peivandyar.database.dao;
 
 /*
  * Copyright (C) 2017 Google Inc.
@@ -21,7 +21,10 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
+
 import java.util.List;
+
+import ir.peivandyar.database.entity.SchoolInfo;
 
 /**
  * The Room Magic is in this file, where you map a Java method call to an SQL query.
@@ -33,24 +36,36 @@ import java.util.List;
  */
 
 @Dao
-public interface WordDao {
+public interface SchoolInfoDao {
 
     // LiveData is a data holder class that can be observed within a given lifecycle.
     // Always holds/caches latest version of data. Notifies its active observers when the
     // data has changed. Since we are getting all the contents of the database,
     // we are notified whenever any of the database contents have changed.
-    @Query("SELECT * from word_table ORDER BY word ASC")
-    LiveData<List<Word>> getAlphabetizedWords();
+    @Query("SELECT * from school_info ORDER BY lastRefreshed ASC ")
+    LiveData<List<SchoolInfo>> getSchools();
 
-    // We do not need a conflict strategy, because the word is our primary key, and you cannot
+    // We do not need a conflict strategy, because the schoolInfo is our primary key, and you cannot
     // add two items with the same primary key to the database. If the table has more than one
     // column, you can use @Insert(onConflict = OnConflictStrategy.REPLACE) to update a row.
     @Insert
-    void insert(Word word);
+    void insert(SchoolInfo schoolInfo);
 
-    @Query("SELECT * from word_table WHERE word == (:id)")
-    Word getWord(String id);
+    @Query("SELECT * from school_info WHERE id == (:id)")
+    SchoolInfo getSchoolInfo(int id);
 
-    @Query("DELETE FROM word_table")
+    @Query("SELECT DISTINCT province from school_info ")
+    LiveData<List<String>> getProvinces();
+
+    @Query("SELECT DISTINCT town from school_info ORDER BY town ASC")
+    LiveData<List<String>> getTowns();
+
+    @Query("SELECT DISTINCT region from school_info ")
+    LiveData<List<Integer>> getRegions();
+
+    @Query("DELETE FROM school_info where id == (:id)")
+    void deleteRow(int id);
+
+    @Query("DELETE FROM school_info")
     void deleteAll();
 }

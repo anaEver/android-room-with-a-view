@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cardHeight"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:paddingTop="5dp"
+    app:cardCornerRadius="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="5dp"
+        android:background="@drawable/rect_round_white">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/schoolPicture"
+            app:layout_constraintBottom_toTopOf="@id/schoolName"
+            app:layout_constraintVertical_weight="60"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/schoolName"
+            android:layout_height="0dp"
+            style="@style/middleTextBlack"
+            android:text="الکی"
+            app:layout_constraintTop_toBottomOf="@id/schoolPicture"
+            app:layout_constraintBottom_toTopOf="@id/schoolAddress"
+            app:layout_constraintVertical_weight="12"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/address"
+            android:paddingRight="@dimen/middle_margin_horizontal"
+            style="@style/smallTextBlack"
+            app:layout_constraintTop_toTopOf="@id/schoolAddress"
+            app:layout_constraintBottom_toBottomOf="@id/schoolAddress"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/address"
+            app:layout_constraintLeft_toRightOf="@id/schoolAddress"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/smallTextBlack"
+            android:id="@+id/schoolAddress"
+            app:layout_constraintBottom_toTopOf="@id/schoolPhone"
+            app:layout_constraintTop_toBottomOf="@id/schoolName"
+            app:layout_constraintRight_toLeftOf="@id/address"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_weight="10"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/schoolPhone"
+            style="@style/smallTextBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_weight="10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/phone"
+            app:layout_constraintTop_toBottomOf="@id/schoolAddress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/schoolPhone"
+            app:layout_constraintBottom_toBottomOf="@id/schoolPhone"
+            app:layout_constraintLeft_toRightOf="@id/schoolPhone"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/phoneNumber"
+            style="@style/smallTextBlack"
+            android:paddingRight="@dimen/middle_margin_horizontal"
+            android:id="@+id/phone"
+            tools:ignore="RtlSymmetry" />
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/heartCircle"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="25dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/heartGuide"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/middle_margin_horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/backGround"
+            app:tint="@color/white"
+
+            app:srcCompat="@drawable/blue_circle"
+
+            />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heart"
+                app:tint="@color/colorPrimary"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_favorite_border_48px"
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/heartGuide"
+            app:layout_constraintGuide_percent="0.75"/>
+
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/schoolCardClick"
+            android:src="@drawable/click_square"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

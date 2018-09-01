@@ -13,9 +13,91 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 <resources>
-    <string name="app_name">RoomWordsSample</string>
+    <string name="app_name">is it</string>
     <string name="action_settings">Settings</string>
     <string name="hint_word">Word…</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
+
+
+    <string name="forgot_text">رمز عبور خود را فراموش کرده اید؟</string>
+    <string name="signup_text">قبلا در پیوندیار ثبت نام نکرده اید؟</string>
+    <string name="error_incorrect_password">رمز عبور واردشده نادرست می باشد</string>
+
+    <!-- fist info strings-->
+    <string name="teacher_string">داشبورد مدرسین</string>
+    <string name="parent_string">داشبورد والدین</string>
+    <string name="bottom_menu">فیلتر بر اساس کلاس، نقش، درس یا مدرسه</string>
+    <string name="courseName_label">نام درس</string>
+    <string name="classSchedule_label">برنامه کلاسی</string>
+    <string name="studentsNumber_label">تعداد دانش آموزان : </string>
+    <string name="classTitle">کلاس  :</string>
+    <string name="schoolTitle">مدرسه  :</string>
+    <string name="title_button">پیوندیار</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tabAssignments">تکالیف</string>
+    <string name="tabGrading">نمره دهی</string>
+    <string name="tabStudentsList">لیست دانش آموزان</string>
+    <string name="tabPlanning">بودجه بندی</string>
+    <string name="tabRollCall">حضور و غیاب</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="text_search">عبارت مورد نظر خود را در اینجا جستجو کنید</string>
+    <string name="textMoreMessages">مشاهده پیام های بیشتر ....</string>
+    <string name="text_select_role">انتخاب نقش</string>
+    <string name="text_select_class">انتخاب کلاس</string>
+    <string name="text_help">راهنمای برنامه</string>
+    <string name="text_settings">تنظیمات برنامه</string>
+    <string name="text_exit">خروج از برنامه</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_teacher">TeacherActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="present">حاضر و خوب</string>
+    <string name="sleepy">حاضر ولی خواب آلود</string>
+    <string name="bad">حاضر ولی خرابکار</string>
+    <string name="lastRollCallText">آخرین حضور و غیاب های ثبت شده</string>
+    <string name="title_activity_parent">ParentActivity</string>
+    <string name="newAssignment">اضافه کردن تمرین جدید</string>
+    <string name="noAttachments">هیچ فایل ضمیمه ای پیوست نشده است</string>
+    <string name="absent">غایب</string>
+
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="profile">مشخصات فردی</string>
+    <string name="name">نام و نام خانوادگی</string>
+    <string name="nsn">کد ملی</string>
+    <string name="idNumber">شماره شناسنامه</string>
+    <string name="teacherCode">کد دبیر</string>
+    <string name="address">آدرس : </string>
+    <string name="phoneNumber">شماره تلفن : </string>
+    <string name="email">ایمیل</string>
+    <string name="bio">درباره من</string>
+    <string name="lastGradesText">آخرین نمرات ثبت شده</string>
+    <string name="next_week">جلسه بعد تدریس خواهد شد</string>
+    <string name="this_week">این هفته تدریس شد</string>
+    <string name="past_week">جلسه گذشته</string>
+    <string name="past_next_week">جلسه آینده</string>
+    <string name="tabGrades">نمرات</string>
+    <string name="tabGraph">نمودار پیشرفت</string>
+    <string name="meanText">........... میانگین نمرات:</string>
+    <string name="midtermsText">نمرات میان ترم</string>
+    <string name="createDate">تاریخ  ایجاد:</string>
+    <string name="assignmentDue">تاریخ تحویل</string>
+    <string name="modifyDate">تاریخ اصلاح:</string>
+    <string name="last_next_week">جلسه گذشته</string>
+    <string name="signUpHere">اینجا ثبت نام کنید</string>
+    <string name="title_activity_schools">SchoolsActivity</string>
+    <string name="goToApp">ورود به برنامه</string>
+    <string name="girl">دخترانه</string>
+    <string name="boy">پسرانه</string>
+    <string name="province">استان</string>
+    <string name="region">منطقه</string>
+    <string name="town">شهر</string>
+    <string name="title_activity_school_detail">SchoolDetailActivity</string>
+    <string name="details">توضیحات</string>
+    <string name="honors">افتخارات :</string>
+    <string name="detailsGoBack">مشاهده همه مدارس</string>
+    <string name="loadMore">بیشتر ...</string>
 </resources>

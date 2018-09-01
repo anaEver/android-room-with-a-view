@@ -16,4 +16,17 @@ limitations under the License. -->
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="small_padding">6dp</dimen>
     <dimen name="big_padding">16dp</dimen>
+
+    <dimen name="loginButtonMarginHorizontal">50dp</dimen>
+    <dimen name="loginButtonMarginVertical">15dp</dimen>
+    <dimen name="middle_margin_horizontal">20dp</dimen>
+    <dimen name="small_margin_horizontal">8dp</dimen>
+    <dimen name="micro_margin_horizontal">2dp</dimen>
+    <dimen name="big_margin_horizontal">40dp</dimen>
+    <dimen name="small_margin_vertical">8dp</dimen>
+    <dimen name="middle_margin_vertical">20dp</dimen>
+    <dimen name="big_margin_vertical">40dp</dimen>
+    <dimen name="smallCircle">50dp</dimen>
+    <dimen name="schoolGeneralHeight">150dp</dimen>
+    <dimen name="cardHeight">200dp</dimen>
 </resources>

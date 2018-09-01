@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="10dp"
+    android:theme="@style/AppTheme.NoActionBar">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/search_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin_horizontal"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/schoolCardsScroolView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="@dimen/middle_margin_vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/search_school_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/micro_margin_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/search_school_text"
+                app:layout_constraintHorizontal_weight="10"
+                app:layout_constraintLeft_toRightOf="@id/search_school_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/search_school_text"
+                app:srcCompat="@drawable/ic_search_solid"
+                app:tint="@color/colorPrimary" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/search_school_text"
+                style="@style/smallTextBlack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/middle_margin_vertical"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/text_search"
+                android:padding="@dimen/micro_margin_horizontal"
+                app:layout_constraintBottom_toTopOf="@id/searchSchoolsExpanded"
+                app:layout_constraintHorizontal_weight="50"
+                app:layout_constraintLeft_toRightOf="@id/search_school_heart"
+                app:layout_constraintRight_toLeftOf="@id/search_school_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/search_school_heart"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/search_school_text"
+                app:layout_constraintHorizontal_weight="10"
+                app:layout_constraintLeft_toRightOf="@id/school_search_drop"
+                app:layout_constraintRight_toLeftOf="@id/search_school_text"
+                app:layout_constraintTop_toTopOf="@id/search_school_text"
+                app:srcCompat="@drawable/ic_favorite_48px"
+                app:tint="@color/colorPrimary" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/school_search_drop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/micro_margin_horizontal"
+                android:rotation="270"
+                app:layout_constraintBottom_toBottomOf="@id/search_school_text"
+                app:layout_constraintHorizontal_weight="10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/search_school_heart"
+                app:layout_constraintTop_toTopOf="@id/search_school_text"
+                app:srcCompat="@drawable/ic_left_arrow"
+                app:tint="@color/colorPrimary" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/searchSchoolsExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/middle_margin_vertical"
+                app:layout_constraintTop_toBottomOf="@id/search_school_button"
+                app:layout_goneMarginBottom="@dimen/middle_margin_vertical"
+                app:layout_goneMarginTop="@dimen/middle_margin_vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/selectOptionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/middle_margin_vertical"
+                        android:src="@android:color/black"
+                        app:layout_constraintBottom_toTopOf="@id/girlToggle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/girlToggleText"
+                        style="@style/middleTextBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="@string/girl"
+                        app:layout_constraintBottom_toBottomOf="@id/girlToggle"
+                        app:layout_constraintLeft_toRightOf="@id/girlToggle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/girlToggle" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/girlToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@id/province"
+                        app:layout_constraintLeft_toRightOf="@id/boyToggleText"
+                        app:layout_constraintRight_toLeftOf="@id/girlToggleText"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/boyToggleText"
+                        style="@style/middleTextBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="@string/boy"
+                        app:layout_constraintBottom_toBottomOf="@id/girlToggle"
+                        app:layout_constraintLeft_toRightOf="@id/boyToggle"
+                        app:layout_constraintRight_toLeftOf="@id/girlToggle"
+                        app:layout_constraintTop_toTopOf="@id/girlToggle" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/boyToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/girlToggle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/boyToggleText"
+                        app:layout_constraintTop_toTopOf="@id/girlToggle"
+                        app:thumbTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/province"
+                        style="@style/middleTextBlack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/small_margin_horizontal"
+                        android:background="@drawable/rect_round_white_border"
+                        android:paddingLeft="@dimen/big_margin_horizontal"
+                        android:paddingRight="@dimen/small_padding"
+                        android:text="@string/province"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/town"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/girlToggle" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/provinceArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/small_margin_horizontal"
+                        android:rotation="270"
+                        app:layout_constraintBottom_toBottomOf="@id/province"
+                        app:layout_constraintLeft_toLeftOf="@id/province"
+                        app:layout_constraintTop_toTopOf="@id/province"
+                        app:srcCompat="@drawable/ic_left_arrow"
+                        app:tint="@color/colorPrimary" />
+
+
+                    <TextView
+                        android:id="@+id/town"
+                        style="@style/middleTextBlack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_round_white_border"
+                        android:paddingLeft="@dimen/big_margin_horizontal"
+                        android:paddingRight="@dimen/small_padding"
+                        android:text="@string/town"
+                        app:layout_constraintBottom_toBottomOf="@id/province"
+                        app:layout_constraintLeft_toRightOf="@id/region"
+                        app:layout_constraintRight_toLeftOf="@id/province"
+                        app:layout_constraintTop_toTopOf="@id/province" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/townArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/small_margin_horizontal"
+                        android:rotation="270"
+                        app:layout_constraintBottom_toBottomOf="@id/town"
+                        app:layout_constraintLeft_toLeftOf="@id/town"
+                        app:layout_constraintTop_toTopOf="@id/town"
+                        app:srcCompat="@drawable/ic_left_arrow"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/region"
+                        style="@style/middleTextBlack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/small_margin_horizontal"
+                        android:background="@drawable/rect_round_white_border"
+                        android:paddingLeft="@dimen/big_margin_horizontal"
+                        android:paddingRight="@dimen/small_padding"
+                        android:text="@string/region"
+                        app:layout_constraintBottom_toBottomOf="@id/province"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/town"
+                        app:layout_constraintTop_toTopOf="@id/province" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/regionArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/small_margin_horizontal"
+                        android:rotation="270"
+                        app:layout_constraintBottom_toBottomOf="@id/region"
+                        app:layout_constraintLeft_toLeftOf="@id/region"
+                        app:layout_constraintTop_toTopOf="@id/region"
+                        app:srcCompat="@drawable/ic_left_arrow"
+                        app:tint="@color/colorPrimary" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/schoolCardsScroolView"
+        android:layout_marginTop="@dimen/small_margin_vertical"
+        app:layout_constraintTop_toBottomOf="@id/search_card">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/schoolCardsAndMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/schoolCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/loadMore"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/school_card" />
+
+        <TextView
+            android:id="@+id/loadMore"
+            style="@style/middleTextBlack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardHeight"
+            android:layout_margin="@dimen/small_margin_horizontal"
+            android:background="@drawable/click_square"
+            android:gravity="center_horizontal"
+            android:text="@string/loadMore"
+            app:layout_constraintTop_toBottomOf="@id/schoolCards" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/goToAppButton"
+        app:layout_constraintTop_toTopOf="@id/goToAppButton"
+        app:srcCompat="@drawable/rect_round_white"
+        app:tint="@color/colorAccent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/goToAppButton"
+        style="@style/largeTextBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/middle_margin_horizontal"
+        android:background="@drawable/click_square"
+        android:gravity="center"
+        android:text="@string/goToApp"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
